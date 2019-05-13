@@ -17,25 +17,23 @@
   
   <title>符智生</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给出一个数组，求出现次数最多的那个数字及其出现次数用HashMap&amp;lt;Integer, Integer&amp;gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码：  123456789101112131415161718192021222324252627282930313233public class CountNumber&amp;#123;      publi">
+  <meta name="description" content="给出一个数组，求出现次数最多的那个数字及其出现次数用HashMap&amp;lt;Integer, Integer&amp;gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码：  public class CountNumber{      public static void mian(String[] args){         int[] arr = {1,2,3,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="符智生">
 <meta property="og:url" content="http://xigqo.cn/2019/05/13/array/index.html">
 <meta property="og:site_name" content="符智生">
-<meta property="og:description" content="给出一个数组，求出现次数最多的那个数字及其出现次数用HashMap&amp;lt;Integer, Integer&amp;gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码：  123456789101112131415161718192021222324252627282930313233public class CountNumber&amp;#123;      publi">
+<meta property="og:description" content="给出一个数组，求出现次数最多的那个数字及其出现次数用HashMap&amp;lt;Integer, Integer&amp;gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码：  public class CountNumber{      public static void mian(String[] args){         int[] arr = {1,2,3,">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-05-13T08:04:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="符智生">
-<meta name="twitter:description" content="给出一个数组，求出现次数最多的那个数字及其出现次数用HashMap&amp;lt;Integer, Integer&amp;gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码：  123456789101112131415161718192021222324252627282930313233public class CountNumber&amp;#123;      publi">
+<meta name="twitter:description" content="给出一个数组，求出现次数最多的那个数字及其出现次数用HashMap&amp;lt;Integer, Integer&amp;gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码：  public class CountNumber{      public static void mian(String[] args){         int[] arr = {1,2,3,">
   
     <link rel="alternate" href="/atom.xml" title="符智生" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/nav.css">
@@ -161,8 +159,40 @@
         </div>
         <div class="content" style="overflow: auto">
             <h1 id="给出一个数组，求出现次数最多的那个数字及其出现次数"><a href="#给出一个数组，求出现次数最多的那个数字及其出现次数" class="headerlink" title="给出一个数组，求出现次数最多的那个数字及其出现次数"></a>给出一个数组，求出现次数最多的那个数字及其出现次数</h1><p>用HashMap&lt;Integer, Integer&gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class CountNumber&#123;</span><br><span class="line">  </span><br><span class="line">    public static void mian(String[] args)&#123;</span><br><span class="line">        int[] arr = &#123;1,2,3,4,8,2,2,5,3,1,2,4,5,2&#125;</span><br><span class="line">        int[] ans = maxTimsx(arr);</span><br><span class="line">        System.out.println(&quot;数字：&quot; + ans[0] + &quot;出现&quot; + ans[1] + &quot;次&quot;)</span><br><span class="line">    &#125;  </span><br><span class="line"> </span><br><span class="line">    public static int[] maxTimes(int[] arr)&#123;</span><br><span class="line">        if(arr == null || arr.length &lt; 1)&#123;</span><br><span class="line">                return null;</span><br><span class="line">        &#125;</span><br><span class="line">        HashMap&lt;Integer,Integer&gt; map = new HashMap&lt;Integer,Integer&gt;();</span><br><span class="line">        </span><br><span class="line">        int times = 0;</span><br><span class="line">        int number = 0;</span><br><span class="line"> </span><br><span class="line">        for(i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">            if(map.get(arr.[i]) == null)&#123;</span><br><span class="line">                map.put(arr[i],1)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            integer value = map.get(arr[i]) + 1;</span><br><span class="line">            map.put(arr[i],value)</span><br><span class="line">            if(value &gt; times)&#123;</span><br><span class="line">                times = value;</span><br><span class="line">                number = arr[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        return new int[] &#123;number,times&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>public class CountNumber{
 
+    public static void mian(String[] args){
+        int[] arr = {1,2,3,4,8,2,2,5,3,1,2,4,5,2}
+        int[] ans = maxTimsx(arr);
+        System.out.println(&quot;数字：&quot; + ans[0] + &quot;出现&quot; + ans[1] + &quot;次&quot;)
+    }  
+
+    public static int[] maxTimes(int[] arr){
+        if(arr == null || arr.length &lt; 1){
+                return null;
+        }
+        HashMap&lt;Integer,Integer&gt; map = new HashMap&lt;Integer,Integer&gt;();
+
+        int times = 0;
+        int number = 0;
+
+        for(i=0;i&lt;arr.length;i++){
+            if(map.get(arr.[i]) == null){
+                map.put(arr[i],1)
+            }
+        }else{
+            integer value = map.get(arr[i]) + 1;
+            map.put(arr[i],value)
+            if(value &gt; times){
+                times = value;
+                number = arr[i];
+            }
+        }
+
+        return new int[] {number,times};
+    }
+}
+</code></pre>
         </div>
         <div class="post-reply">
             
