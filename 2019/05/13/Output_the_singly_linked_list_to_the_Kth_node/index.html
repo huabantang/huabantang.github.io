@@ -134,33 +134,6 @@ var themeMenus = {};
 </header>
 
 
-  <div id="originBgDiv" style="background: #fff; width: 100%;">
-
-      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
-        <img id="originBg" width="100%" alt src>
-      </div>
-
-  </div>
-
-  <script>
-  function setAboutIMG(){
-      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
-      var random = Math.floor((Math.random() * imgUrls.length ));
-      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-        document.getElementById("originBg").src=imgUrls[random];
-      } else {
-        document.getElementById("originBg").src='/' + imgUrls[random];
-      }
-  }
-  bgDiv=document.getElementById("originBgDiv");
-  if(location.pathname.match('about')){
-    setAboutIMG();
-    bgDiv.style.display='block';
-  }else{
-    bgDiv.style.display='none';
-  }
-  </script>
-
 
 
   <div id="container">
@@ -174,7 +147,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="https://images.unsplash.com/photo-1553901753-215db344677a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" rel="gallery_cjvn7md2o0004glgeqxh9uitb">
+      <a class="article-gallery-img fancybox" href="https://images.unsplash.com/photo-1553901753-215db344677a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" rel="gallery_cjvn87wsj0004kagecrw40sgr">
         <img src="https://images.unsplash.com/photo-1553901753-215db344677a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" itemprop="image">
       </a>
     
