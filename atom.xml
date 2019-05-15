@@ -5,9 +5,9 @@
   <subtitle>永远相信美好的事情即将来临</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://xigqo.cn/"/>
+  <link href="www.baidu.com/"/>
   <updated>2019-05-15T02:44:12.000Z</updated>
-  <id>http://xigqo.cn/</id>
+  <id>www.baidu.com/</id>
   
   <author>
     <name>LionKing</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>两数之和</title>
-    <link href="http://xigqo.cn/2019/05/13/Two_Sum/"/>
-    <id>http://xigqo.cn/2019/05/13/Two_Sum/</id>
+    <link href="www.baidu.com/2019/05/13/Two_Sum/"/>
+    <id>www.baidu.com/2019/05/13/Two_Sum/</id>
     <published>2019-05-13T10:01:02.000Z</published>
     <updated>2019-05-15T02:44:12.000Z</updated>
     
@@ -35,16 +35,16 @@
     </summary>
     
     
-      <category term="算法" scheme="http://xigqo.cn/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="www.baidu.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="数据结构" scheme="http://xigqo.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="www.baidu.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>判断链表是否有环</title>
-    <link href="http://xigqo.cn/2019/05/13/Determine_if_the_linked_list_has_a_ring/"/>
-    <id>http://xigqo.cn/2019/05/13/Determine_if_the_linked_list_has_a_ring/</id>
+    <link href="www.baidu.com/2019/05/13/Determine_if_the_linked_list_has_a_ring/"/>
+    <id>www.baidu.com/2019/05/13/Determine_if_the_linked_list_has_a_ring/</id>
     <published>2019-05-13T09:43:47.000Z</published>
     <updated>2019-05-14T02:38:28.581Z</updated>
     
@@ -60,16 +60,16 @@
     </summary>
     
     
-      <category term="算法" scheme="http://xigqo.cn/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="www.baidu.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="数据结构" scheme="http://xigqo.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="www.baidu.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>给出一个数组，求出现次数最多的那个数字及其出现次数</title>
-    <link href="http://xigqo.cn/2019/05/13/Find_the_number_of_occurrences_in_the_array%20and_the_number_of_occurrences/"/>
-    <id>http://xigqo.cn/2019/05/13/Find_the_number_of_occurrences_in_the_array and_the_number_of_occurrences/</id>
+    <link href="www.baidu.com/2019/05/13/Find_the_number_of_occurrences_in_the_array%20and_the_number_of_occurrences/"/>
+    <id>www.baidu.com/2019/05/13/Find_the_number_of_occurrences_in_the_array and_the_number_of_occurrences/</id>
     <published>2019-05-13T09:43:47.000Z</published>
     <updated>2019-05-14T02:39:01.546Z</updated>
     
@@ -85,16 +85,16 @@
     </summary>
     
     
-      <category term="算法" scheme="http://xigqo.cn/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="www.baidu.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="数据结构" scheme="http://xigqo.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="www.baidu.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>输出单链表倒数第 K 个节点</title>
-    <link href="http://xigqo.cn/2019/05/13/Output_the_singly_linked_list_to_the_Kth_node/"/>
-    <id>http://xigqo.cn/2019/05/13/Output_the_singly_linked_list_to_the_Kth_node/</id>
+    <link href="www.baidu.com/2019/05/13/Output_the_singly_linked_list_to_the_Kth_node/"/>
+    <id>www.baidu.com/2019/05/13/Output_the_singly_linked_list_to_the_Kth_node/</id>
     <published>2019-05-13T09:43:47.000Z</published>
     <updated>2019-05-14T02:39:38.547Z</updated>
     
@@ -110,9 +110,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://xigqo.cn/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="www.baidu.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="数据结构" scheme="http://xigqo.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="www.baidu.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
