@@ -17,19 +17,25 @@
   
   <title>判断链表是否有环 | LionKing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="判断链表是否有环问题描述 判断链表是否有环 单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。  快慢指针法解题思想   （1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。  （2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。  （3）当 slow 与 fast 相等，且二者">
+  <meta name="description" content="![img] 判断链表是否有环问题描述 判断链表是否有环 单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。  快慢指针法解题思想   （1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。  （2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。  （3）当 slow 与 fast">
 <meta name="keywords" content="算法,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="判断链表是否有环">
 <meta property="og:url" content="www.baidu.com/2019/05/13/Determine_if_the_linked_list_has_a_ring/index.html">
 <meta property="og:site_name" content="LionKing">
-<meta property="og:description" content="判断链表是否有环问题描述 判断链表是否有环 单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。  快慢指针法解题思想   （1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。  （2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。  （3）当 slow 与 fast 相等，且二者">
+<meta property="og:description" content="![img] 判断链表是否有环问题描述 判断链表是否有环 单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。  快慢指针法解题思想   （1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。  （2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。  （3）当 slow 与 fast">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
-<meta property="og:updated_time" content="2019-05-14T02:38:28.581Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190327105121671.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190327105143473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190327105206876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190327105256322.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019032710532455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190327105348498.png">
+<meta property="og:updated_time" content="2019-05-15T05:58:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="判断链表是否有环">
-<meta name="twitter:description" content="判断链表是否有环问题描述 判断链表是否有环 单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。  快慢指针法解题思想   （1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。  （2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。  （3）当 slow 与 fast 相等，且二者">
+<meta name="twitter:description" content="![img] 判断链表是否有环问题描述 判断链表是否有环 单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。  快慢指针法解题思想   （1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。  （2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。  （3）当 slow 与 fast">
 <meta name="twitter:image" content="https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
   
     <link rel="alternate" href="/atom.xml" title="LionKing" type="application/atom+xml">
@@ -51,7 +57,7 @@
     <nav class="nav">
          <div class="nav-left">
             <a href="/" class="nav-item" style="font-size: 20px;">
-              <span class="logo">符智生</span>'s Blog
+              <span class="logo">LionKing</span>'s Blog
             </a>
          </div>
         <div class="nav-center is-hidden position-relative" id="search_container">
@@ -151,7 +157,7 @@
             
             <div class="is-flex align-center">
                 <img class="post-avatar" src="https://avatars1.githubusercontent.com/u/31136279?s=460&v=4">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> 符智生</span>
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> LionKing</span>
                 <span class="post-date sub-title">at: 2019-05-13</span>
             </div>
             
@@ -165,7 +171,8 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h1><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a><strong>问题描述</strong></h5><blockquote>
+            <p>![img]<img src="https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="post-cover"></p>
+<h1 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h1><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a><strong>问题描述</strong></h5><blockquote>
 <p>判断链表是否有环</p>
 <p>单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。</p>
 </blockquote>
