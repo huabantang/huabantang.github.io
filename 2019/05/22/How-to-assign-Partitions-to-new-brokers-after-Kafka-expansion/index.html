@@ -15,15 +15,21 @@
   </script>
 
   
-  <title>Tag: 算法 | LionKing</title>
+  <title>LionKing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？ layout: posttitle: Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？photos:categories: 大数据 tags: 大数据 1.问题描述对kafka扩容增加brokers节点后，在Kakfa Maneg">
+<meta property="og:type" content="article">
 <meta property="og:title" content="LionKing">
-<meta property="og:url" content="www.baidu.com/tags/算法/index.html">
+<meta property="og:url" content="www.baidu.com/2019/05/22/How-to-assign-Partitions-to-new-brokers-after-Kafka-expansion/index.html">
 <meta property="og:site_name" content="LionKing">
+<meta property="og:description" content="Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？ layout: posttitle: Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？photos:categories: 大数据 tags: 大数据 1.问题描述对kafka扩容增加brokers节点后，在Kakfa Maneg">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://images.unsplash.com/photo-1554189097-469e3847835d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+<meta property="og:updated_time" content="2019-05-22T01:32:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LionKing">
+<meta name="twitter:description" content="Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？ layout: posttitle: Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？photos:categories: 大数据 tags: 大数据 1.问题描述对kafka扩容增加brokers节点后，在Kakfa Maneg">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1554189097-469e3847835d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
   
     <link rel="alternate" href="/atom.xml" title="LionKing" type="application/atom+xml">
   
@@ -99,154 +105,131 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .container.tag-cate-wrap {
-        min-height: 93vh;
+          <!--博文页面-->
+
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
+        background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .category-title-inner {
-        padding-top: 50px;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    strong {
-        text-transform: capitalize;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .flow-chart {
+        text-align: center;
+    }
+
+    img[alt="post-cover"] {
+        display: none;
     }
 </style>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>Null</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="https://avatars1.githubusercontent.com/u/31136279?s=460&v=4">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> LionKing</span>
+                <span class="post-date sub-title">at: 2019-05-22</span>
+            </div>
+            
+                <div>
+                    
+                </div>
+            
+        </div>
+        <div class="content" style="overflow: auto">
+            <h1 id="Kafka扩容后如何将Partitions分区分配到新brokers节点上-kafka数据倾斜问题如何解决？"><a href="#Kafka扩容后如何将Partitions分区分配到新brokers节点上-kafka数据倾斜问题如何解决？" class="headerlink" title="Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？"></a>Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？</h1><hr>
+<p>layout: post<br>title: Kafka扩容后如何将Partitions分区分配到新brokers节点上?kafka数据倾斜问题如何解决？<br>photos:<br>categories: 大数据</p>
+<h2 id="tags-大数据"><a href="#tags-大数据" class="headerlink" title="tags: 大数据"></a>tags: 大数据</h2><p><img src="https://images.unsplash.com/photo-1554189097-469e3847835d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="post-cover"></p>
+<h5 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h5><p>对kafka扩容增加brokers节点后，在Kakfa Maneger中已经看到新增的brokers节点已加入kafka集群，但是新增的brokers里并没有看到有topic存在。</p>
+<p>2.原因</p>
+<p>在扩容之前就已经存在的topic并不会自动地分配分区到新节点上，除非扩容后新建的topic。这种情况只能手动将topic分区重新分配到brokers节点上(包括新增的brokers节点)，Kafka内部提供了相关的工具来重新分配topic的分区。</p>
+<p>3.解决步骤</p>
+<p>3.1增加Partitions(分区)</p>
+<p>如果扩容后brokers节点数有5个，那么topic的Partitions数至少要等于节点数才能均匀分配在brokers上。若存在Partitions数少于brokers数的topic，就要对其增加Partitions。方法有两个：<br>￭ 在kafka Maneger中选中topic，接着选择Add Partitions.</p>
+<p>￭ 在服务器上执行命令：./bin/kafka-topics.sh –zookeeper ip:host,ip:host,ip:host –alter –partitions 5 –topic XXX(topic)</p>
+<p>这样分区之后，会有一定的概率发生数据倾斜现象，但是这里先不管，之后的步骤中会重新分配分区，数据倾斜问题将会解决。</p>
+<p>3.2重新分配Partitions</p>
+<p>Partitions增加好之后，就要将其重新均匀分配到各个brokers上(包括新增的brokers节点)，Kafka提供重新分配分区的工具：kafka-reassign-partitions.sh，它有了3中工作模式：</p>
+<p>￭ generate模式，给定需要重新分配的topic，自动生成reassign plan（只是生成，并不执行）<br>￭ execute模式，根据指定的reassign plan重新分配Partition<br>￭ verify模式，验证重新分配Partition是否成功</p>
+<p>3.2.1生成topics-to-move.json文件</p>
+<p>在Kafka目录下生成topics-to-move.json文件，一定要是json格式，它指定哪些topic需要分区，可以同时指定多个topic:</p>
+<p>{“topics”: [{“topic”: “topic1”},<br>            {“topic”: “topic2”}],<br>“version”:1<br>}</p>
+<p>3.2.2生成reassign plan</p>
+<p>  topics-to-move.json文件建好之后，执行以下命令，生成分配计划，需要指定brokers-list:</p>
+<p>./bin/kafka-reassign-partitions.sh –zookeeper ip:host,ip:host,ip:host  –topics-to-move-json-file topics-to-move.json –broker-list “0,1,2,3,4” –generate</p>
+<p> 执行命令的结果中Proposed partition reassignment configuration下面生成的就是将分区重新分配到目前所有brokers上的结果。将这些内容保存到名为result.json文件里面（文件名不重要，只要保证内容是json格式即可），然后执行这些reassign plan：</p>
+<p>3.2.3执行reassign plan</p>
+<p>输入以下命令即可执行成功：<br>bin/kafka-reassign-partitions.sh –zookeeper ip:host,ip:host,ip:host  –reassignment-json-file result.json –execute</p>
+<p>3.2.4查看执行reassign plan结果<br>输入以下命令即可：<br>bin/kafka-reassign-partitions.sh –zookeeper ip:host,ip:host,ip:host  –reassignment-json-file result.json –verify</p>
+<p>注：如果需要执行多个重新分配分区计划，需要等本次完全分配好之后才能接着继续执行剩下的计划。</p>
+<p>执行以上命令之后，topic的分区将会均匀分配到brokers节点上，之前的数据倾斜问题也会被解决。</p>
 
+        </div>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NDIwNy8yMDc0MA==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
 
-<div class="container tag-cate-wrap">
-    <div class="category-title-inner content has-text-centered">
-        <h1><strong style="border-top: 2px solid; border-bottom: 2px solid;">tag·算法</strong></h1>
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
+            
+        </div>
     </div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
 
-    
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/05/13/Two_Sum/">
-                    
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="https://images.unsplash.com/photo-1555999003-3f2bc447570e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>两数之和</strong> <small class="post-date">at: 2019-05-13</small>
-                                <br>
-                                
-两数之和
-给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
-你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
 
-示例：
-给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 =..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/05/13/Find_the_number_of_occurrences_in_the_array and_the_number_of_occurrences/">
-                    
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="https://images.unsplash.com/photo-1554366347-897a5113f6ab?ixlib=rb-1.2.1&w=1000&q=80" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>给出一个数组，求出现次数最多的那个数字及其出现次数</strong> <small class="post-date">at: 2019-05-13</small>
-                                <br>
-                                
-给出一个数组，求出现次数最多的那个数字及其出现次数用HashMap&lt;Integer, Integer&gt;,数组元素做key，出现次数做value;遍历数组，出现一次，value++； 代码： 
-public class CountNumber{
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_default.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
-    public static void mian(String[] args){
-    ..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/05/13/Determine_if_the_linked_list_has_a_ring/">
-                    
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>判断链表是否有环</strong> <small class="post-date">at: 2019-05-13</small>
-                                <br>
-                                
-判断链表是否有环问题描述
-判断链表是否有环
-单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。
-
-快慢指针法解题思想 
-
-（1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。 
-（2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。 
-..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/05/13/Output_the_singly_linked_list_to_the_Kth_node/">
-                    
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="https://images.unsplash.com/photo-1553901753-215db344677a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>输出单链表倒数第 K 个节点</strong> <small class="post-date">at: 2019-05-13</small>
-                                <br>
-                                
-输出单链表倒数第 K 个节点问题描述
-输入一个单链表，输出此链表中的倒数第 K 个节点。（去除头结点，节点计数从 1 开始）。 
-
-双指针法解题思想
-（1）定义两个指针 p1 和 p2 分别指向链表头节点。（2）p1 前进 K 个节点，则 p1 与 p2 相距 K 个节点。（3）p1，p2 同时前进，每次前进 1 个节点。（4）当 p1 指向到达链表末..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-</div>
       </div>
   </div>
   <style>
