@@ -67,6 +67,31 @@
   </entry>
   
   <entry>
+    <title>判断链表是否有环</title>
+    <link href="www.baidu.com/2019/05/13/Determine_if_the_linked_list_has_a_ring/"/>
+    <id>www.baidu.com/2019/05/13/Determine_if_the_linked_list_has_a_ring/</id>
+    <published>2019-05-13T09:43:47.000Z</published>
+    <updated>2019-05-15T06:08:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="post-cover"></p><h1 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h1><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a><strong>问题描述</strong></h5><blockquote><p>判断链表是否有环</p><p>单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。</p></blockquote><h5 id="快慢指针法"><a href="#快慢指针法" class="headerlink" title="快慢指针法"></a><strong>快慢指针法</strong></h5><p>解题思想 </p><blockquote><p>（1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。 </p><p>（2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。 </p><p>（3）当 slow 与 fast 相等，且二者均不为空，则链表存在环。 </p></blockquote><h5 id="图解过程："><a href="#图解过程：" class="headerlink" title="图解过程："></a><strong>图解过程：</strong></h5><p>无环过程： </p><p><img src="https://img-blog.csdnimg.cn/20190327105121671.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p><img src="https://img-blog.csdnimg.cn/20190327105143473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p><img src="https://img-blog.csdnimg.cn/20190327105206876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p>通过图解过程可以看出，若表中不存在环形，fast 与 slow 指针只能在链表末尾相遇。</p><p>有环过程：</p><p><img src="https://img-blog.csdnimg.cn/20190327105256322.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p><img src="https://img-blog.csdnimg.cn/2019032710532455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> <img src="https://img-blog.csdnimg.cn/20190327105348498.png" alt="img"> </p><p>图解过程可以看出，若链表中存在环，则快慢指针必然能在环中相遇。这就好比在环形跑道中进行龟兔赛跑。由于兔子速度大于乌龟速度，则必然会出现兔子与乌龟再次相遇情况。因此，当出现快慢指针相等时，且二者不为NULL，则表明链表存在环。 </p><h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h5><pre><code class="java">bool isExistLoop(ListNode* pHead)  {      ListNode* fast;//慢指针，每次前进一个节点    ListNode* slow;//快指针，每次前进2个节点     slow = fast = pHead ;  //两个指针均指向链表头节点    //当没有到达链表结尾，则继续前进    while (slow != NULL &amp;&amp; fast -&gt; next != NULL)  {          slow = slow -&gt; next ; //慢指针前进一个节点        fast = fast -&gt; next -&gt; next ; //快指针前进两个节点        if (slow == fast)  //若两个指针相遇，且均不为NULL则存在环            return true ;      }      //到达末尾仍然没有相遇，则不存在环    return false ;  }</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;w=1000&amp;q=80&quot; alt=&quot;po
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="www.baidu.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="数据结构" scheme="www.baidu.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>给出一个数组，求出现次数最多的那个数字及其出现次数</title>
     <link href="www.baidu.com/2019/05/13/Find_the_number_of_occurrences_in_the_array%20and_the_number_of_occurrences/"/>
     <id>www.baidu.com/2019/05/13/Find_the_number_of_occurrences_in_the_array and_the_number_of_occurrences/</id>
@@ -81,31 +106,6 @@
       
         &lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1554366347-897a5113f6ab?ixlib=rb-1.2.1&amp;w=1000&amp;q=80&quot; alt=&quot;post-cover&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;给出一个数组，求出现次
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="www.baidu.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="数据结构" scheme="www.baidu.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>判断链表是否有环</title>
-    <link href="www.baidu.com/2019/05/13/Determine_if_the_linked_list_has_a_ring/"/>
-    <id>www.baidu.com/2019/05/13/Determine_if_the_linked_list_has_a_ring/</id>
-    <published>2019-05-13T09:43:47.000Z</published>
-    <updated>2019-05-15T06:08:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="post-cover"></p><h1 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h1><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a><strong>问题描述</strong></h5><blockquote><p>判断链表是否有环</p><p>单链表中的环是指链表末尾的节点的 next 指针不为 NULL ，而是指向了链表中的某个节点，导致链表中出现了环形结构。</p></blockquote><h5 id="快慢指针法"><a href="#快慢指针法" class="headerlink" title="快慢指针法"></a><strong>快慢指针法</strong></h5><p>解题思想 </p><blockquote><p>（1）定义两个指针分别为 slow，fast，并且将指针均指向链表头节点。 </p><p>（2）规定，slow 指针每次前进 1 个节点，fast 指针每次前进两个节点。 </p><p>（3）当 slow 与 fast 相等，且二者均不为空，则链表存在环。 </p></blockquote><h5 id="图解过程："><a href="#图解过程：" class="headerlink" title="图解过程："></a><strong>图解过程：</strong></h5><p>无环过程： </p><p><img src="https://img-blog.csdnimg.cn/20190327105121671.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p><img src="https://img-blog.csdnimg.cn/20190327105143473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p><img src="https://img-blog.csdnimg.cn/20190327105206876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p>通过图解过程可以看出，若表中不存在环形，fast 与 slow 指针只能在链表末尾相遇。</p><p>有环过程：</p><p><img src="https://img-blog.csdnimg.cn/20190327105256322.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p><p><img src="https://img-blog.csdnimg.cn/2019032710532455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> <img src="https://img-blog.csdnimg.cn/20190327105348498.png" alt="img"> </p><p>图解过程可以看出，若链表中存在环，则快慢指针必然能在环中相遇。这就好比在环形跑道中进行龟兔赛跑。由于兔子速度大于乌龟速度，则必然会出现兔子与乌龟再次相遇情况。因此，当出现快慢指针相等时，且二者不为NULL，则表明链表存在环。 </p><h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h5><pre><code class="java">bool isExistLoop(ListNode* pHead)  {      ListNode* fast;//慢指针，每次前进一个节点    ListNode* slow;//快指针，每次前进2个节点     slow = fast = pHead ;  //两个指针均指向链表头节点    //当没有到达链表结尾，则继续前进    while (slow != NULL &amp;&amp; fast -&gt; next != NULL)  {          slow = slow -&gt; next ; //慢指针前进一个节点        fast = fast -&gt; next -&gt; next ; //快指针前进两个节点        if (slow == fast)  //若两个指针相遇，且均不为NULL则存在环            return true ;      }      //到达末尾仍然没有相遇，则不存在环    return false ;  }</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/flagged/photo-1556669546-b1f29875df1c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;w=1000&amp;q=80&quot; alt=&quot;po
       
     
     </summary>
