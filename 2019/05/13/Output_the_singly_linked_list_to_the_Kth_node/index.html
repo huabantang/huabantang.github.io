@@ -26,9 +26,9 @@
 <meta property="og:description" content="输出单链表倒数第 K 个节点问题描述 输入一个单链表，输出此链表中的倒数第 K 个节点。（去除头结点，节点计数从 1 开始）。   双指针法解题思想 （1）定义两个指针 p1 和 p2 分别指向链表头节点。（2）p1 前进 K 个节点，则 p1 与 p2 相距 K 个节点。（3）p1，p2 同时前进，每次前进 1 个节点。（4）当 p1 指向到达链表末尾，由于 p1 与 p2 相距 K 个节点，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://images.unsplash.com/photo-1553901753-215db344677a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
+<meta property="og:image" content="https://blog-img-fzs.oss-cn-shenzhen.aliyuncs.com/Output_the_singly_linked_list_to_the_Kth_node-1.png">
 <meta property="og:image" content="https://blog-img-fzs.oss-cn-shenzhen.aliyuncs.com/Output_the_singly_linked_list_to_the_Kth_node-1.png,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://blog-img-fzs.oss-cn-shenzhen.aliyuncs.com/Output_the_singly_linked_list_to_the_Kth_node-1.png,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-05-31T07:55:31.891Z">
+<meta property="og:updated_time" content="2019-05-31T07:57:44.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="输出单链表倒数第 K 个节点">
 <meta name="twitter:description" content="输出单链表倒数第 K 个节点问题描述 输入一个单链表，输出此链表中的倒数第 K 个节点。（去除头结点，节点计数从 1 开始）。   双指针法解题思想 （1）定义两个指针 p1 和 p2 分别指向链表头节点。（2）p1 前进 K 个节点，则 p1 与 p2 相距 K 个节点。（3）p1，p2 同时前进，每次前进 1 个节点。（4）当 p1 指向到达链表末尾，由于 p1 与 p2 相距 K 个节点，">
@@ -173,7 +173,7 @@
 </blockquote>
 <h5 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a><strong>双指针法</strong></h5><p>解题思想</p>
 <p>（1）定义两个指针 p1 和 p2 分别指向链表头节点。<br>（2）p1 前进 K 个节点，则 p1 与 p2 相距 K 个节点。<br>（3）p1，p2 同时前进，每次前进 1 个节点。<br>（4）当 p1 指向到达链表末尾，由于 p1 与 p2 相距 K 个节点，则 p2 指向目标节点。</p>
-<h5 id="图解过程"><a href="#图解过程" class="headerlink" title="图解过程"></a><strong>图解过程</strong></h5><p><img src="https://blog-img-fzs.oss-cn-shenzhen.aliyuncs.com/Output_the_singly_linked_list_to_the_Kth_node-1.png,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p>
+<h5 id="图解过程"><a href="#图解过程" class="headerlink" title="图解过程"></a><strong>图解过程</strong></h5><p><img src="https://blog-img-fzs.oss-cn-shenzhen.aliyuncs.com/Output_the_singly_linked_list_to_the_Kth_node-1.png" alt="img"> </p>
 <p><img src="https://blog-img-fzs.oss-cn-shenzhen.aliyuncs.com/Output_the_singly_linked_list_to_the_Kth_node-1.png,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fZnpz,size_16,color_FFFFFF,t_70" alt="img"> </p>
 <h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h5><pre><code class="java">
 ListNode* findKthTail(ListNode *pHead, int K){
